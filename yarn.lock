@@ -422,6 +422,13 @@
   resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-5.1.4.tgz#72b8b705cfce36b00b59af196195146e356500c4"
   integrity sha512-N2XSI2n3sQqp5w7Y/AN/L2XDjBIRGqXko+eDp42sydYSBeJuSm5a1sLf8zakmo8u7tA8NmBgoDLA1HeOESjp9A==
 
+"@vue-leaflet/vue-leaflet@^0.10.1":
+  version "0.10.1"
+  resolved "https://registry.yarnpkg.com/@vue-leaflet/vue-leaflet/-/vue-leaflet-0.10.1.tgz#17330515629d500ac113009a49f8cf98d140e8cc"
+  integrity sha512-RNEDk8TbnwrJl8ujdbKgZRFygLCxd0aBcWLQ05q/pGv4+d0jamE3KXQgQBqGAteE1mbQsk3xoNcqqUgaIGfWVg==
+  dependencies:
+    vue "^3.2.25"
+
 "@vue-macros/common@^1.12.2":
   version "1.15.0"
   resolved "https://registry.yarnpkg.com/@vue-macros/common/-/common-1.15.0.tgz#42a97458698beca552a08c89e9680c3b6c5bb71b"
@@ -1769,6 +1776,11 @@ keyv@^4.5.3:
   dependencies:
     json-buffer "3.0.1"
 
+leaflet@^1.9.4:
+  version "1.9.4"
+  resolved "https://registry.yarnpkg.com/leaflet/-/leaflet-1.9.4.tgz#23fae724e282fa25745aff82ca4d394748db7d8d"
+  integrity sha512-nxS1ynzJOmOlHp+iL3FyWqK89GtNL8U8rvlMOsQdTTssxZwCXh8N2NB3GDQOL+YR3XnWyZAxwQixURb+FA74PA==
+
 levn@^0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/levn/-/levn-0.4.1.tgz#ae4562c007473b932a6200d403268dd2fffc6ade"
@@ -2568,7 +2580,7 @@ vue-router@^4.4.0:
   dependencies:
     "@vue/devtools-api" "^6.6.4"
 
-vue@^3.4.21, vue@^3.4.31:
+vue@^3.2.25, vue@^3.4.21, vue@^3.4.31:
   version "3.5.12"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.5.12.tgz#e08421c601b3617ea2c9ef0413afcc747130b36c"
   integrity sha512-CLVZtXtn2ItBIi/zHZ0Sg1Xkb7+PU32bJJ8Bmy7ts3jxXTcbfsEfBivFYYWz1Hur+lalqGAh65Coin0r+HRUfg==
