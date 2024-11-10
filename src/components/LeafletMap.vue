@@ -4,9 +4,12 @@
     <l-marker v-for="location in locations" :key="location.id" :lat-lng="[location.osm_lat, location.osm_lon]">
       <l-popup>
         <h4>{{ location.osm_name }}</h4>
+        <PriceCountChip :count="location.price_count" :withLabel="true" />
         <v-chip label size="small" density="comfortable">
           {{ location.osm_tag_key }}: {{ location.osm_tag_value }}
         </v-chip>
+        <br />
+        <a :href="'https://prices.openfoodfacts.org/locations/' + location.id" target="_blank">View in Open Prices</a>
       </l-popup>
     </l-marker>
   </l-map>
@@ -27,10 +30,7 @@ export default {
     locations: {
       type: Array,
       required: true,
-      default: () => [
-        {id: 1, osm_name: 'Elefan', osm_tag_key: 'shop', osm_tag_value: 'convenience', osm_lat: 45, osm_lon: 5},
-        {id: 2, osm_name: 'Intermarché', osm_tag_key: 'shop', osm_tag_value: 'supermarket', osm_lat: 46, osm_lon: 6},
-      ]
+      default: () => []
     },
   },
   data() {
