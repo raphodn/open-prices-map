@@ -8,18 +8,23 @@
         <i style="width:15px;height:15px;margin-right:5px;background-color:#f8cc1b;display:inline-block;opacity:0.8"></i> Between 10 and 50<br>
         <i style="width:15px;height:15px;margin-right:5px;background-color:#f37324;display:inline-block;opacity:0.8"></i> Less than 10<br>
         <i style="width:15px;height:15px;margin-right:5px;background-color:#e12729;display:inline-block;opacity:0.8"></i> 0 prices
+        <hr class="my-2" />
+        <p>{{ locations.length }} locations</p>
       </div>
     </l-control>
     <l-marker v-for="location in locations" :key="location.id" :lat-lng="[location.osm_lat, location.osm_lon]">
       <l-icon :icon-url="getLocationIconUrl(location)" :icon-size="[25, 41]" :icon-anchor="[12, 41]" :popup-anchor="[1, -34]" :shadow-size="[41, 41]" />
       <l-popup>
-        <h4>{{ location.osm_name }}</h4>
-        <PriceCountChip :count="location.price_count" :withLabel="true" />
-        <v-chip label size="small" density="comfortable">
+        <h2 class="mb-2">{{ location.osm_name }}</h2>
+        <PriceCountChip class="mb-1" :count="location.price_count" :withLabel="true" />
+        <v-chip class="mb-1" label size="small" density="comfortable">
+          {{ location.osm_address_city }}, {{ location.osm_address_country }}
+        </v-chip>
+        <v-chip class="mb-2" label size="small" density="comfortable">
           {{ location.osm_tag_key }}: {{ location.osm_tag_value }}
         </v-chip>
         <br />
-        <a :href="'https://prices.openfoodfacts.org/locations/' + location.id" target="_blank">View in Open Prices</a>
+        <v-btn size="x-small" color="primary" append-icon="mdi-open-in-new" :href="'https://prices.openfoodfacts.org/locations/' + location.id" target="_blank">View in Open Prices</v-btn>
       </l-popup>
     </l-marker>
   </l-map>
