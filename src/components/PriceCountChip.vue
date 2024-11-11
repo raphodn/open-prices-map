@@ -21,13 +21,16 @@ export default {
   methods: {
     getColor() {
       if (this.count === 0) {
-        return 'error'
+        return 'red'  // 'error'
       }
-      if (this.count === 1) {
-        return 'warning'
+      else if (this.count < 10) {
+        return 'orange'  // 'warning'
       }
-      if (this.count > 1) {
-        return 'success'
+      else if (this.count < 50) {
+        return 'orange'  // 'yellow' unreadable
+      }
+      else {  // >= 50
+        return 'green'  // 'success'
       }
     },
   }
