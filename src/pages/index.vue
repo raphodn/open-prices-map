@@ -11,7 +11,7 @@
 
   onMounted(() => {
     loading = true
-    fetch('https://cors-anywhere.herokuapp.com/https://prices.openfoodfacts.org/data/locations.jsonl.gz')
+    fetch('https://prices.openfoodfacts.org/data/locations.jsonl.gz')
     .then(res => res.arrayBuffer())
     // gz: ungzip
     // native alternative to pako? https://github.com/flameddd/blog/blob/master/2024-03-02%EF%BC%9AWeb%20JavaScript%2C%20How%20to%20fetch%20and%20read%20gzip%20JSON%20file%20with%20native%20API.md
